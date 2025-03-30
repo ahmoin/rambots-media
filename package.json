@@ -1,0 +1,18 @@
+{
+  "name": "rambots-media",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "ahmoin",
+  "license": "MIT",
+  "dependencies": {
+    "fontkit": "^2.0.4",
+    "satori": "^0.12.2",
+    "sharp": "^0.33.5"
+  }
+}
