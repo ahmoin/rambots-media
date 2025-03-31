@@ -116,7 +116,12 @@ const mainSvgBuffer = await satori(
 if (format === "svg") {
   fs.writeFileSync("output.svg", mainSvgBuffer);
 } else {
-  await sharp(Buffer.from(mainSvgBuffer))[format]().toFile(`output.${format}`);
+  const sharpInstance = sharp(Buffer.from(mainSvgBuffer));
+  if (format === "jpg") {
+    await sharpInstance.jpeg().toFile("output.jpg");
+  } else {
+    await sharpInstance.png().toFile("output.png");
+  }
 }
 
 console.log(`Generated output.${format}`);
